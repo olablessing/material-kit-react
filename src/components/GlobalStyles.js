@@ -1,5 +1,4 @@
-import createStyles from '@material-ui/styles/createStyles';
-import makeStyles from '@material-ui/styles/makeStyles';
+import { createStyles, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => createStyles({
   '@global': {

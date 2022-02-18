@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { styled } from '@material-ui/core/styles';
+import { experimentalStyled } from '@material-ui/core';
 import DashboardNavbar from './DashboardNavbar';
 import DashboardSidebar from './DashboardSidebar';
 
-const DashboardLayoutRoot = styled('div')(
+const DashboardLayoutRoot = experimentalStyled('div')(
   ({ theme }) => ({
     backgroundColor: theme.palette.background.default,
     display: 'flex',
@@ -14,7 +14,7 @@ const DashboardLayoutRoot = styled('div')(
   })
 );
 
-const DashboardLayoutWrapper = styled('div')(
+const DashboardLayoutWrapper = experimentalStyled('div')(
   ({ theme }) => ({
     display: 'flex',
     flex: '1 1 auto',
@@ -26,13 +26,13 @@ const DashboardLayoutWrapper = styled('div')(
   })
 );
 
-const DashboardLayoutContainer = styled('div')({
+const DashboardLayoutContainer = experimentalStyled('div')({
   display: 'flex',
   flex: '1 1 auto',
   overflow: 'hidden'
 });
 
-const DashboardLayoutContent = styled('div')({
+const DashboardLayoutContent = experimentalStyled('div')({
   flex: '1 1 auto',
   height: '100%',
   overflow: 'auto'

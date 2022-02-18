@@ -1,20 +1,19 @@
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import { useRoutes } from 'react-router-dom';
-import { ThemeProvider, StyledEngineProvider } from '@material-ui/core';
-import GlobalStyles from './components/GlobalStyles';
-import theme from './theme';
-import routes from './routes';
+import { ThemeProvider } from '@material-ui/core';
+import GlobalStyles from 'src/components/GlobalStyles';
+import 'src/mixins/chartjs';
+import theme from 'src/theme';
+import routes from 'src/routes';
 
 const App = () => {
-  const content = useRoutes(routes);
+  const routing = useRoutes(routes);
 
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        {content}
-      </ThemeProvider>
-    </StyledEngineProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {routing}
+    </ThemeProvider>
   );
 };
 
